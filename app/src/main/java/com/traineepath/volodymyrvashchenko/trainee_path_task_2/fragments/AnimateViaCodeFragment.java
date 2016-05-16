@@ -2,6 +2,7 @@ package com.traineepath.volodymyrvashchenko.trainee_path_task_2.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,8 @@ import com.traineepath.volodymyrvashchenko.trainee_path_task_2.R;
 
 public class AnimateViaCodeFragment extends Fragment{
 
+    private static final String TAG = AnimateViaCodeFragment.class.getSimpleName();
+
     private ImageView mImage;
     private EditText mXTranslationField;
     private EditText mYTranslationField;
@@ -23,38 +26,36 @@ public class AnimateViaCodeFragment extends Fragment{
     private float mXTranslation;
     private float mYTranslation;
 
-    public AnimateViaCodeFragment() {
-        // Required empty public constructor
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        Log.v(TAG, "Method: onCreate()");
         super.onCreate(savedInstanceState);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+        Log.v(TAG, "Method: onCreateView()");
         View v = inflater.inflate(R.layout.fragment_animate_via_code, container, false);
 
         mContainer = container;
         mAnimate = (Button) v.findViewById(R.id.view_property);
-        handleAnimateButton();
+        setAnimateButtonClickListener();
 
         mReset = (Button) v.findViewById(R.id.reset_animation);
-        handleResetButton();
+        setResetButtonClickListener();
 
         mXTranslationField = (EditText) v.findViewById(R.id.x_translation);
         mYTranslationField = (EditText) v.findViewById(R.id.y_translation);
 
         mImage = (ImageView) v.findViewById(R.id.image_animation);
-        handleImageViewClick(mImage);
+        setImageViewClickListener(mImage);
 
         return v;
     }
 
-    private void handleImageViewClick(ImageView mImage) {
+    private void setImageViewClickListener(ImageView mImage) {
+        Log.v(TAG, "Method: setImageViewClickListener()");
         mImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,7 +68,8 @@ public class AnimateViaCodeFragment extends Fragment{
         });
     }
 
-    private void handleAnimateButton() {
+    private void setAnimateButtonClickListener() {
+        Log.v(TAG, "Method: setAnimateButtonClickListener()");
         mAnimate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -84,7 +86,8 @@ public class AnimateViaCodeFragment extends Fragment{
         });
     }
 
-    private void handleResetButton() {
+    private void setResetButtonClickListener() {
+        Log.v(TAG, "Method: setResetButtonClickListener()");
         mReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

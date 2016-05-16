@@ -1,0 +1,14 @@
+Index: app/src/main/java/com/traineepath/volodymyrvashchenko/trainee_path_task_2/fragments/AnimateViaCodeFragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/traineepath/volodymyrvashchenko/trainee_path_task_2/fragments/AnimateViaCodeFragment.java	(revision ef1a84e8e5cf3d41317a64375c405c2251f1af34)
++++ app/src/main/java/com/traineepath/volodymyrvashchenko/trainee_path_task_2/fragments/AnimateViaCodeFragment.java	(revision )
+@@ -92,4 +92,5 @@
+             }
+         });
+     }
++    //
+ }
+\ No newline at end of file
