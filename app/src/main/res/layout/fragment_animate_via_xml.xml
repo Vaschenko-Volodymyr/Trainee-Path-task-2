@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dip"
+    tools:context="com.traineepath.volodymyrvashchenko.trainee_path_task_2.fragments.AnimateViaXmlFragment">
+
+    <LinearLayout
+        android:id="@+id/buttons_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/animation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_animate_via_xml_animation_button_text"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:textColor="@color/white"
+            android:background="@drawable/buttons_selector" />
+
+        <Button
+            android:id="@+id/animator"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_animate_via_xml_animator_button_text"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:textColor="@color/white"
+            android:background="@drawable/buttons_selector" />
+    </LinearLayout>
+
+    <include layout="@layout/animation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/buttons_container" />
+
+</RelativeLayout>

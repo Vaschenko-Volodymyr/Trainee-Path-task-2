@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dip"
+    tools:context="com.traineepath.volodymyrvashchenko.trainee_path_task_2.fragments.AnimateViaCodeFragment">
+
+    <LinearLayout
+        android:id="@+id/buttons_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_animate_via_code_animate_button_text"
+            android:id="@+id/view_property"
+            android:textColor="@color/white"
+            android:background="@drawable/buttons_selector"
+            android:layout_margin="4dp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_animate_via_code_reset_button_text"
+            android:id="@+id/reset_animation"
+            android:textColor="@color/white"
+            android:background="@drawable/buttons_selector"
+            android:layout_margin="4dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/edit_texts_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttons_container"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <EditText
+            android:id="@+id/x_translation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/fragment_animate_via_code_trans_x_text"
+            android:layout_weight="1"
+            android:inputType="numberDecimal"/>
+
+        <EditText
+            android:id="@+id/y_translation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/fragment_animate_via_code_trans_y_text"
+            android:layout_weight="1"
+            android:inputType="numberDecimal"/>
+    </LinearLayout>
+
+    <include layout="@layout/animation"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_below="@id/edit_texts_container" />
+
+</RelativeLayout>
